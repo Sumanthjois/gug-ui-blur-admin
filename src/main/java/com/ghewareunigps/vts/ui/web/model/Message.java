@@ -24,7 +24,7 @@ public class Message {
         this.message = message;
     }
     
-    public boolean isResult() {
+    public boolean getResult() {
         return result;
     }
 
