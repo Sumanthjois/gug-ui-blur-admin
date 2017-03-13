@@ -19,7 +19,7 @@ public class Message {
         
     }
 
-    public Message(boolean result,String messsage){
+    public Message(boolean result,String message){
         this.result = result;
         this.message = message;
     }
