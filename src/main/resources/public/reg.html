@@ -11,9 +11,10 @@
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96x96.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
   <link rel="stylesheet" href="styles/vendor-479457d43d.css">
-
+  <script src="scripts/reg.js"></script>
   <link rel="stylesheet" href="styles/auth-a200a050c1.css">
 </head>
 <body>
@@ -22,31 +23,31 @@
     <h1>Sign up to Blur Admin</h1>
     <a href="auth.html" class="auth-link">Already have a Blur Admin account? Sign in!</a>
 
-    <form class="form-horizontal">
+    <form class="form-horizontal" ng-submit="signup()" ng-app="Signup" ng-controller="SignupController">
       <div class="form-group">
         <label for="inputName3" class="col-sm-2 control-label">Name</label>
 
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="inputName3" placeholder="Full Name">
+            <input ng-model="username" required="required" type="text" class="form-control" id="inputName3" placeholder="Full Name">
         </div>
       </div>
       <div class="form-group">
         <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
 
         <div class="col-sm-10">
-          <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+            <input ng-model="email" required="required" type="email" class="form-control" id="inputEmail3" placeholder="Email">
         </div>
       </div>
       <div class="form-group">
         <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
 
         <div class="col-sm-10">
-          <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+            <input ng-model="password" required="required" type="password" class="form-control" id="inputPassword3" placeholder="Password">
         </div>
       </div>
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-default btn-auth">Sign up</button>
+          <button type="submit" class="btn btn-default btn-auth" >Sign up</button>
         </div>
       </div>
     </form>
