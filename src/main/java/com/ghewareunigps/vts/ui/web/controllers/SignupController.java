@@ -8,9 +8,7 @@ package com.ghewareunigps.vts.ui.web.controllers;
 import com.ghewareunigps.vts.ui.web.model.Message;
 import com.ghewareunigps.vts.ui.web.model.User;
 import org.springframework.web.bind.annotation.RequestMapping;
-import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -21,9 +19,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SignupController {
     
-    @RequestMapping(value="/signup",method=GET)
+    @RequestMapping(value="/signup",method=POST)
     public Message signup(User user){
-        return new Message(true,"Success");
+        return new Message(true,"You are now registered \n You can now login using your credentials");
     }
     
 }
