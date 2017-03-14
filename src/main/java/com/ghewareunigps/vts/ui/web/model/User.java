@@ -7,10 +7,13 @@ package com.ghewareunigps.vts.ui.web.model;
 
 
 public class User {
+     
+      public static final String ROLE_USER = "ROLE_USER";
+    
       private String username;
       private String email;
       private String password;
-      
+      private String role;
       
       public User(){
           
@@ -22,6 +25,19 @@ public class User {
           this.email = email;
       }
 
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+   
+
+      
+      
+      
     public String getUsername() {
         return username;
     }
